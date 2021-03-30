@@ -9,7 +9,9 @@
   },
   "scripts": {
     "start": "webpack serve --mode=development --open --hot --port 3000",
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@babel/core": "^7.13.14",
